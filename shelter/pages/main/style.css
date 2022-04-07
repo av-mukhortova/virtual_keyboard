@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background-size: 100%;
+    background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%),
+        linear-gradient(0deg, #211F20, #211F20);
+}
+
+.start_screen {
+    margin: 0 auto;
+    width: 1280px;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    padding: 60px 40px 0px;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-family: "Georgia";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.logo h6 {
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding-top: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    padding-top: 16px;
+}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+nav a {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-decoration: none;
+    color: #CDCDCD;
+
+}
+
+nav a:active {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #FAFAFA;
+    border-bottom: 3px solid;
+    border-color: #F1CDB3;
+}
+
+.start_screen_content {
+    display: flex;
+    margin: 60px 40px 0px;
+}
+
+.content {
+    margin-top: 163px;
+    margin-right: 42px;
+}
+
+.content h2 {
+    font-family: Georgia;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+    margin-right: 150px;
+    margin-bottom: 42px;
+}
+
+.content p {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #CDCDCD;
+    margin-bottom: 42px;
+}
+
+.content button {
+    height: 52px;
+    width: 207px;
+    border-radius: 100px;
+    background: #F1CDB3;
+    border: 0;
+    font-family: Georgia;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: url("../../assets/fonts/georgia.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: url("../../assets/fonts/arialmt.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
