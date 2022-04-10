@@ -12,15 +12,15 @@
         <div class="format">
             <header>
                 <div class="logo">
-                    <h1>Cozy House</h1>
-                    <h6>Shelter for pets in Boston</h6>
+                    <h1 class="logo_big"><a href="../main/index.html">Cozy House</a></h1>
+                    <h6 class="logo_small"><a href="../main/index.html">Shelter for pets in Boston</a></h6>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#">About the shelter</a></li>
-                        <li><a href="#">Our pets</a></li>
-                        <li><a href="#">Help the shelter</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li><a href="../main/index.html">About the shelter</a></li>
+                        <li><a class="active" href="#">Our pets</a></li>
+                        <li><a href="../main/index.html#help">Help the shelter</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
             </header>
@@ -73,38 +73,43 @@
                     </div>
                 </div>
                 <div class="pets_nav">
-                    <button class="pets_arrow"><img src="../../assets/icons/arrows_left.png" /></button>
-                    <button class="pets_arrow"><img src="../../assets/icons/arrow_left.png" /></button>
-                    <button class="pets_arrow">1</button>
-                    <button class="pets_arrow"><img src="../../assets/icons/arrow_right.png" /></button>
-                    <button class="pets_arrow"><img src="../../assets/icons/arrows_right.png" /></button>
+                    <button class="pets_arrow pets_arrow_disabled">&lt;&lt;</button>
+                    <button class="pets_arrow pets_arrow_disabled">&lt;</button>
+                    <button class="pets_arrow pets_arrow_active">1</button>
+                    <button class="pets_arrow">&gt;</button>
+                    <button class="pets_arrow">&gt;&gt;</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer_wrapper">
+        <a name="contacts"></a>
         <div class="format">
             <footer>
                 <div class="contacts">
                     <h3>For questions and suggestions</h3>
                     <div class="contact">
-                        <img src="../../assets/icons/icon-email.png" />
-                        <h4>email@shelter.com</h4>
+                        <a href="mailto:email@shelter.com"><img src="../../assets/icons/icon-email.png" /></a>
+                        <h4><a href="mailto:email@shelter.com">email@shelter.com</a></h4>
                     </div>
                     <div class="contact">
-                        <img src="../../assets/icons/icon-phone.png" />
-                        <h4>+13 674 567 75 54</h4>
+                        <a href="tel:+13 674 567 75 54"><img src="../../assets/icons/icon-phone.png" /></a>
+                        <h4><a href="tel:+13 674 567 75 54">+13 674 567 75 54</a></h4>
                     </div>
                 </div>
                 <div class="contacts">
                     <h3>We are waiting for your visit</h3>
                     <div class="contact" style="margin-top: 34px">
-                        <img src="../../assets/icons/icon-marker.png" />
-                        <h4>1 Central Street, Boston (entrance from the store)</h4>
+                        <a href="https://goo.gl/maps/YPjHfsJoMMjytKMw8" target="_blank"><img
+                                src="../../assets/icons/icon-marker.png" /></a>
+                        <h4><a href="https://goo.gl/maps/YPjHfsJoMMjytKMw8" target="_blank">1 Central Street, Boston
+                                (entrance from the store)</a></h4>
                     </div>
                     <div class="contact" style="margin-top: 32px">
-                        <img src="../../assets/icons/icon-marker.png" />
-                        <h4>18 South Park, London </h4>
+                        <a href="https://goo.gl/maps/NVgTXtqSqbYTZwhM8" target="_blank"><img
+                                src="../../assets/icons/icon-marker.png" /></a>
+                        <h4><a href="https://goo.gl/maps/NVgTXtqSqbYTZwhM8" target="_blank">18 South Park, London</a>
+                        </h4>
                     </div>
                 </div>
                 <img src="../../assets/images/footer-puppy.png" />
