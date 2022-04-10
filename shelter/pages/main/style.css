@@ -378,9 +378,14 @@ nav a:hover {
     background: #F1CDB3;
     border-radius: 9px;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 13px;
     display: flex;
     align-items: center;
+    border: 2px solid #F1CDB3; 
+}
+
+.donation_content button:hover {
+    background: #fafafa;
 }
 
 .donation_content a {
