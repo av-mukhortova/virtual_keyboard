@@ -506,6 +506,7 @@ footer a {
     .start_screen {
         display: block;
         margin: 60px 100px 0px 99px;
+        text-align: right;
     }
 
     .start_screen_content {
@@ -517,7 +518,7 @@ footer a {
 
     .start_screen img {
         width: 569px;
-        margin-left: 70px;
+        margin: 0px 30px 0px 0px;
     }
 
     .about {
@@ -764,6 +765,10 @@ footer a {
     .about img {
         width: 260px;
         padding-top: 42px;
+    }
+
+    .about p {
+        text-align: justify;
     }
 
     #second_paragraph {
