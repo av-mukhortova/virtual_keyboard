@@ -240,6 +240,9 @@ header {
     text-align: center;
     border: 2px solid #fafafa;
     border-radius: 11px;
+    width: 270px;
+    height: 435px;
+    box-sizing: border-box;
 }
 
 .pets_card1,
@@ -271,7 +274,6 @@ header {
 
 .pets_card button {
     border: 2px solid #F1CDB3;
-    box-sizing: border-box;
     border-radius: 100px;
     font-family: Georgia;
     font-size: 17px;
@@ -284,6 +286,7 @@ header {
     width: 187px;
     text-align: center;
     margin-bottom: 30px;
+    box-sizing: border-box;
 }
 
 .button_rest {
@@ -300,7 +303,7 @@ header {
     color: #292929;
     margin-top: 60px;
     margin-bottom: 100px;
-    padding: 15px 45px;
+    padding: 11px 41px;
     border: 2px solid #F1CDB3;
 }
 
@@ -333,6 +336,11 @@ header {
 
 .help_icon {
     margin: 0 60px;
+}
+
+.help_icon img {
+    width: 60px;
+    height: 60px;
 }
 
 .help_icon h6 {
@@ -563,7 +571,7 @@ footer a {
 
     .help {
         max-width: 630px;
-        margin: 60px auto 100px;
+        margin: 60px auto 45px;
     }
 
     .help_icons {
@@ -743,7 +751,6 @@ footer a {
 
     .start_screen_content p {
         margin: 42px 0px;
-        text-align: center;
     }
 
     .start_screen img {
@@ -825,6 +832,7 @@ footer a {
 
     .help_icon img {
         width: 50px;
+        height: 50px;
     }
 
     .help_icon {
