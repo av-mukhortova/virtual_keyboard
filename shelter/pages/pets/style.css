@@ -243,6 +243,7 @@ footer h3 {
     text-align: left;
     color: #FFFFFF;
     margin: 0;
+    width: 278px;
 }
 
 footer h4 {
@@ -474,7 +475,7 @@ footer a {
     .pets h3 {
         font-size: 25px;
         line-height: 32px;
-        padding: 42px 0px;
+        padding: 42px 0px 27px;
     }
 
     .pets_cards {
