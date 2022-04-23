@@ -13,45 +13,25 @@
         <div class="format">
             <header>
                 <div class="logo">
-                    <a href="../main/index.html">
+                    <a href="#">
                         <h1>Cozy House</h1>
                         <h6>Shelter for pets in Boston</h6>
                     </a>
                 </div>
-                <nav>
-                    <div class="burger">
-                        <input id="burger__toggle" class="burger_hide" type="checkbox" />
-                        <label class="burger_btn burger_hide" for="burger__toggle">
-                            <span class="burger_line"></span>
-                            <span class="burger_line"></span>
-                            <span class="burger_line"></span>
-                        </label>
-                        <div class="menu__box">
-                            <div class="burger_header burger_hide">
-                                <div class="logo burger_logo">
-                                    <a href="../main/index.html">
-                                        <h1>Cozy House</h1>
-                                        <h6>Shelter for pets in Boston</h6>
-                                    </a>
-                                </div>
-                                <input id="burger__toggle" type="checkbox" />
-                                <label class="burger_btn burger_btn_active" for="burger__toggle">
-                                    <span class="burger_line burger_line_active"></span>
-                                    <span class="burger_line burger_line_active"></span>
-                                    <span class="burger_line burger_line_active"></span>
-                                </label>
-                            </div>
-                            <ul>
-                                <li><a class="menu__item" href="../main/index.html">About the shelter</a></li>
-                                <li><a id="active" class="menu__item" href="#">Our pets</a></li>
-                                <li><a class="menu__item" href="../main/index.html#help">Help the shelter</a></li>
-                                <li><a class="menu__item" href="#contacts">Contacts</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <nav class="menu">
+                    <div><a class="menu__item" href="../main/index.html">About the shelter</a></div>
+                    <div><a class="menu__item menu__item_active" href="../pets/index.html">Our pets</a></div>
+                    <div><a class="menu__item" href="../main/index.html#help">Help the shelter</a></div>
+                    <div><a class="menu__item" href="#contacts">Contacts</a></div>
                 </nav>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </header>
         </div>
+        <div id="blackout"></div>
     </div>
     <div class="pets_wrapper">
         <div class="format">
@@ -148,5 +128,5 @@
         </div>
     </div>
 </body>
-
+<script src="../pets/script.js"></script>
 </html>
