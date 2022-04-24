@@ -13,98 +13,38 @@
         <div class="format">
             <header>
                 <div class="logo">
-                    <a href="../main/index.html">
+                    <a href="#">
                         <h1>Cozy House</h1>
                         <h6>Shelter for pets in Boston</h6>
                     </a>
                 </div>
-                <nav>
-                    <div class="burger">
-                        <input id="burger__toggle" class="burger_hide" type="checkbox" />
-                        <label class="burger_btn burger_hide" for="burger__toggle">
-                            <span class="burger_line"></span>
-                            <span class="burger_line"></span>
-                            <span class="burger_line"></span>
-                        </label>
-                        <div class="menu__box">
-                            <div class="burger_header burger_hide">
-                                <div class="logo burger_logo">
-                                    <a href="../main/index.html">
-                                        <h1>Cozy House</h1>
-                                        <h6>Shelter for pets in Boston</h6>
-                                    </a>
-                                </div>
-                                <input id="burger__toggle" type="checkbox" />
-                                <label class="burger_btn burger_btn_active" for="burger__toggle">
-                                    <span class="burger_line burger_line_active"></span>
-                                    <span class="burger_line burger_line_active"></span>
-                                    <span class="burger_line burger_line_active"></span>
-                                </label>
-                            </div>
-                            <ul>
-                                <li><a class="menu__item" href="../main/index.html">About the shelter</a></li>
-                                <li><a id="active" class="menu__item" href="#">Our pets</a></li>
-                                <li><a class="menu__item" href="../main/index.html#help">Help the shelter</a></li>
-                                <li><a class="menu__item" href="#contacts">Contacts</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <nav class="menu">
+                    <div><a class="menu__item" href="../main/index.html">About the shelter</a></div>
+                    <div><a class="menu__item menu__item_active" href="../pets/index.html">Our pets</a></div>
+                    <div><a class="menu__item" href="../main/index.html#help">Help the shelter</a></div>
+                    <div><a id="menu_item_contacts" class="menu__item" href="#contacts">Contacts</a></div>
                 </nav>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </header>
         </div>
+        <div id="blackout"></div>
     </div>
     <div class="pets_wrapper">
         <div class="format">
             <div class="pets">
                 <h3>Our friends who<br>are looking for a house</h3>
-                <div class="pets_cards">
-                    <div class="pets_card">
-                        <img src="../../assets/images/pets-katrine.png" />
-                        <h6>Katrine</h6>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pets_card">
-                        <img src="../../assets/images/pets-jennifer.png" />
-                        <h6>Jennifer</h6>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pets_card">
-                        <img src="../../assets/images/pets-woody.png" />
-                        <h6>Woody</h6>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pets_card pets_card_mobile">
-                        <img src="../../assets/images/pets-sofia.png" />
-                        <h6>Sofia</h6>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pets_card pets_card_mobile">
-                        <img src="../../assets/images/pets-timmy.png" />
-                        <h6>Timmy</h6>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pets_card pets_card_mobile">
-                        <img src="../../assets/images/pets-charly.png" />
-                        <h6>Charly</h6>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pets_card pets_card_tablet">
-                        <img src="../../assets/images/pets-scarlet.png" />
-                        <h6>Scarlet</h6>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pets_card pets_card_tablet">
-                        <img src="../../assets/images/pets-freddie.png" />
-                        <h6>Freddie</h6>
-                        <button>Learn more</button>
-                    </div>
+                <div class="pets_cards">                    
                 </div>
                 <div class="pets_nav">
-                    <button class="pets_arrow pets_arrow_disabled">&lt;&lt;</button>
-                    <button class="pets_arrow pets_arrow_disabled">&lt;</button>
-                    <button class="pets_arrow pets_arrow_active">1</button>
-                    <button class="pets_arrow">&gt;</button>
-                    <button class="pets_arrow">&gt;&gt;</button>
+                    <button id="prev_end" class="pets_arrow pets_arrow_disabled">&lt;&lt;</button>
+                    <button id="prev" class="pets_arrow pets_arrow_disabled">&lt;</button>
+                    <button id="current_page" class="pets_arrow pets_arrow_active">1</button>
+                    <button id="next" class="pets_arrow">&gt;</button>
+                    <button id="next_end" class="pets_arrow">&gt;&gt;</button>
                 </div>
             </div>
         </div>
@@ -147,6 +87,25 @@
             </footer>
         </div>
     </div>
+    <div class="modal_wrapper modal_hidden">
+        <div class="modal__div">
+            <button class="modal__button"><img src="../../assets/icons/vector.png" alt="close_icon" /></button>
+            <div class="card_window modal__window">
+                <img class="card_window" src="#" />
+                <div class="card_window modal__content">
+                    <h3 class="card_window"></h3>
+                    <h4 class="card_window"></h4>
+                    <h5 class="card_window"></h5>
+                        <ul class="card_window">
+                            <li class="card_window"><span class="card_window modal__age"></span></li>
+                            <li class="card_window"><span class="card_window modal__inoculations"></span></li>
+                            <li class="card_window"><span class="card_window modal__diseases"></span></li>
+                            <l class="card_window"i><span class="card_window modal__parasites"></span></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
+<script src="../pets/script.js"></script>
 </html>
