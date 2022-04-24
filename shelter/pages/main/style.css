@@ -243,11 +243,10 @@ header {
 
 .pets_slider {
     width: 990px;
-}
-
-.pets_slider_section {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    left: 0px;
 }
 
 .pets_card {
@@ -261,36 +260,6 @@ header {
 
 .pets_card_hidden {
     display: none;
-}
-
-@keyframes move-right {
-    from {
-        left: 0px;
-    }
-
-    to {
-        left: -1280px;
-    }
-}
-
-.transition-right {
-    animation-name: move-right;
-    animation-duration: 3s;
-}
-
-@keyframes move-left {
-    from {
-        left: -1280px;
-    }
-
-    to {
-        left: 0px;
-    }
-}
-
-.transition-left {
-    animation-name: move-left;
-    animation-duration: 3s;
 }
 
 .pets_card:hover {

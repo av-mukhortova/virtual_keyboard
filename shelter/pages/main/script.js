@@ -15,9 +15,6 @@ var menu_item_help = document.querySelector('#menu_item_help');
 var menu_item_contacts = document.querySelector('#menu_item_contacts');
 var screen = document.documentElement.clientWidth;
 
-var pets_card_left = document.querySelector("#pets_card_left");
-var pets_card_right = document.querySelector("#pets_card_right");
-
 var pets = [
   {
     "name": "Katrine",
@@ -109,6 +106,17 @@ var pets = [
   }
 ];
 
+document.addEventListener("DOMContentLoaded", ready);
+
+function ready() {
+  if (screen >= 768) {
+    cards[2].className = 'pets_card';
+    if (screen >= 1280) {
+      cards[3].className = 'pets_card';
+    }
+  }
+}
+
 burger.onclick = function () {
   if (burger.className === 'burger') {
     burger.className = 'burger burger-active';
@@ -141,13 +149,6 @@ document.addEventListener('click', (e) => {
   }
 })
 
-function addCard(ind) {
-  var card0 = document.createElement("div");
-  card0.className = 'pets_card';
-  card0.id = 'pets_card' + ind;
-  return card0;
-}
-
 function sortingCards() {
   function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -166,61 +167,21 @@ function sortingCards() {
     i++;
   }
   shuffle(arr);
-  return arr;
-}
-const moveLeft = () => {
-  slider.className = 'pets_slider transition-left';
-  btn_prev.removeEventListener("click", moveLeft);
-  btn_next.removeEventListener("click", moveRight);
-};
-
-const moveRight = () => {
-  slider.className = 'pets_slider transition-right';
-  btn_prev.removeEventListener("click", moveLeft);
-  btn_next.removeEventListener("click", moveRight);
-};
-btn_prev.addEventListener("click", moveLeft);
-btn_next.addEventListener("click", moveRight);
-
-slider.addEventListener("animationend", (animationEvent) => {
-  let changedItem;
-  if (animationEvent.animationName === "move-left") {
-    slider.classList.remove("transition-left");
-    changedItem = pets_card_left;
-    document.querySelector("#pets_card_active").innerHTML = pets_card_left.innerHTML;
-  } else {
-    slider.classList.remove("transition-right");
-    changedItem = pets_card_right;
-    document.querySelector("#pets_card_active").innerHTML = pets_card_right.innerHTML;
-  }
-  changedItem.innerHTML = "";
-  var index_arr = sortingCards();
-  alert(index_arr[0]+' '+index_arr[1]+' '+index_arr[2]);
-  var card_cur = addCard(index_arr[0]);
-  card_cur.innerHTML = '<img src="' + pets[index_arr[0]].img + '" /><h6>' + pets[index_arr[0]].name + '</h6><button>Learn more</button>';
-  changedItem.appendChild(card_cur);
+  cards[arr[0]].className = 'pets_card';
   if (screen >= 768) {
-    card_cur = addCard(index_arr[1]);
-    card_cur.innerHTML = '<img src="' + pets[index_arr[1]].img + '" /><h6>' + pets[index_arr[1]].name + '</h6><button>Learn more</button>';
-    changedItem.appendChild(card_cur);
+    cards[arr[1]].className = 'pets_card';
     if (screen >= 1280) {
-      card_cur = addCard(index_arr[2]);
-      card_cur.innerHTML = '<img src="' + pets[index_arr[2]].img + '" /><h6>' + pets[index_arr[2]].name + '</h6><button>Learn more</button>';
-      changedItem.appendChild(card_cur);
+      cards[arr[2]].className = 'pets_card';
     }
   }
+}
 
-  btn_prev.addEventListener("click", moveLeft);
-  btn_next.addEventListener("click", moveRight);
-})
-/*
 btn_prev.onclick = function () {
   sortingCards();
 }
 btn_next.onclick = function () {
   sortingCards();
 }
-*/
 
 slider.onclick = function () {
   var id = -1;
@@ -269,9 +230,9 @@ menu_item_contacts.onclick = function () {
   blackout.className = '';
 }
 
-modal_window.onmouseover = function () {
+modal_window.onmouseover = function() {
   close_button.className = 'modal__button';
 }
-modal_window.onmouseout = function () {
+modal_window.onmouseout = function() {
   close_button.className = 'modal__button modal__button__hover';
 }
