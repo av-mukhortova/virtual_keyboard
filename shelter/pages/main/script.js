@@ -175,6 +175,7 @@ function sortingCards() {
     }
   }
 }
+
 btn_prev.onclick = function () {
   sortingCards();
 }
