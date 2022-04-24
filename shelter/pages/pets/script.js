@@ -15,7 +15,10 @@ var screen = document.documentElement.clientWidth;
 var cards = document.querySelector('.pets_cards');
 
 var modal = document.querySelector('.modal_wrapper');
+var modal_window = document.querySelector('.modal__window');
 var close_button = document.querySelector('.modal__button');
+
+var menu_item_contacts = document.querySelector('#menu_item_contacts');
 
 document.addEventListener("DOMContentLoaded", ready);
 
@@ -189,16 +192,18 @@ burger.onclick = function () {
 }
 document.addEventListener('click', (e) => {
   const withinBoundaries = e.composedPath().includes(header);
-
-  if (!withinBoundaries) {
+  var parent = event.target.parentElement;
+  if (!withinBoundaries && parent.className !== 'pets_card' && event.target.className !== 'pets_card' && event.target.className.substring(0, 11) !== 'card_window') {
     burger.className = 'burger';
     menu.className = 'menu';
     body.className = '';
     header.className = '';
     logo.className = 'logo';
     blackout.className = '';
+    modal.className = 'modal_wrapper modal_hidden';
   }
 })
+
 next.onclick = function () {
   if (+current_page.innerHTML < page_count) {
     current_page.innerHTML = +current_page.innerHTML + 1;
@@ -254,9 +259,9 @@ cards.onclick = function () {
     document.querySelector('.modal__window h4').innerText=pets[id].type+' - '+pets[id].breed;
     document.querySelector('.modal__window h5').innerText=pets[id].description;
     document.querySelector('.modal__age').innerHTML='<b>Age:</b> '+pets[id].age;
-    document.querySelector('.modal__inoculations').innerHTML='<b>Inoculations:</b> '+pets[id].inoculations;
-    document.querySelector('.modal__diseases').innerHTML='<b>Diseases:</b> '+pets[id].diseases;
-    document.querySelector('.modal__parasites').innerHTML='<b>Parasites:</b> '+pets[id].parasites;
+    document.querySelector('.modal__inoculations').innerHTML='<b>Inoculations:</b> '+pets[id].inoculations.join(', ');
+    document.querySelector('.modal__diseases').innerHTML='<b>Diseases:</b> '+pets[id].diseases.join(', ');
+    document.querySelector('.modal__parasites').innerHTML='<b>Parasites:</b> '+pets[id].parasites.join(', ');
 
     modal.className = 'modal_wrapper';
     body.className = 'scroll_hidden';
@@ -266,4 +271,20 @@ cards.onclick = function () {
 close_button.onclick = function () {
   modal.className = 'modal_wrapper modal_hidden';
   body.className = '';
+}
+
+menu_item_contacts.onclick = function () {
+  burger.className = 'burger';
+  menu.className = 'menu';
+  body.className = '';
+  header.className = '';
+  logo.className = 'logo';
+  blackout.className = '';
+}
+
+modal_window.onmouseover = function() {
+  close_button.className = 'modal__button';
+}
+modal_window.onmouseout = function() {
+  close_button.className = 'modal__button modal__button__hover';
 }

@@ -342,7 +342,7 @@ header {
 
 .modal__div {
     width: 952px;
-    height: 552px;
+    height: auto;
     text-align: right;
 }
 
@@ -357,18 +357,28 @@ header {
     background: transparent;
 }
 
+.modal__button:hover {
+    background: #F1CDB3;
+}
+
+.modal__button__hover {
+    background: #F1CDB3;
+}
+
 .modal__window {
     background: #fafafa;
     width: 900px;
-    height: 500px;
+    height: auto;
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     display: flex;
     justify-content: flex-start;
     cursor: default;
+    margin-bottom: 52px;
 }
 
 .modal__window img {
     width: 500px;
+    height: 500px;
 }
 
 .modal__content {
@@ -672,16 +682,17 @@ footer a {
 
     .modal__div {
         width: 682px;
-        height: 402px;
+        height: auto;
     }
 
     .modal__window {
         width: 630px;
-        height: 350px;
+        height: auto;
     }
 
     .modal__window img {
         width: 350px;
+        height: 350px;
     }
 
     .modal__content {
@@ -842,6 +853,7 @@ footer a {
 
     .menu-active div {
         padding: 0;
+        margin: 20px 0px;
     }
 
     .menu-active a {
@@ -937,12 +949,12 @@ footer a {
 
     .modal__div {
         width: 270px;
-        height: 393px;
+        height: auto;
     }
 
     .modal__window {
         width: 240px;
-        height: 341px;
+        height: auto;
     }
 
     .modal__window img {
@@ -953,7 +965,7 @@ footer a {
         text-align: center;
         color: #000000;
         letter-spacing: 0.06em;
-        margin: 10px;
+        width: 220px;
     }
 
     .modal__content h4 {
