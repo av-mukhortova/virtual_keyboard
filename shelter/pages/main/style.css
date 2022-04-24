@@ -245,8 +245,6 @@ header {
     width: 990px;
     display: flex;
     justify-content: space-between;
-    position: relative;
-    left: 0px;
 }
 
 .pets_card {
