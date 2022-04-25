@@ -169,7 +169,7 @@ burger.onclick = function () {
 document.addEventListener('click', (e) => {
   const withinBoundaries = e.composedPath().includes(header);
   var parent = event.target.parentElement;
-  if (!withinBoundaries && parent.className !== 'pets_card' && event.target.className !== 'pets_card' && event.target.className.substring(0, 11) !== 'card_window') {
+  if (!withinBoundaries && parent.className.substring(0,9) !== 'pets_card' && event.target.className.substring(0,9) !== 'pets_card' && event.target.className.substring(0, 11) !== 'card_window') {
     burger.className = 'burger';
     menu.className = 'menu';
     body.className = '';
@@ -183,11 +183,11 @@ document.addEventListener('click', (e) => {
 slider.onclick = function () {
   var id = -1;
   var parent = event.target.parentElement;
-  if (parent.className === 'pets_card') {
-    id = +parent.id.substring(9, 10);
+  if (parent.className.substring(0,9) === 'pets_card') {
+    id = +parent.className.replace('pets_card pets_card','');
   }
-  if (event.target.className === 'pets_card') {
-    id = +event.target.id.substring(9, 10);
+  if (event.target.className.substring(0,9) === 'pets_card') {
+    id = +event.target.className.replace('pets_card pets_card','');
   }
   if (id >= 0) {
     document.querySelector('.modal__window img').src = pets[id].img;
@@ -233,7 +233,7 @@ modal_window.onmouseover = function () {
 modal_window.onmouseout = function () {
   close_button.className = 'modal__button modal__button__hover';
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function sortingCards() {
   var i = 0;
   var arr = [];
