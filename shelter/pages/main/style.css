@@ -245,6 +245,48 @@ header {
     width: 990px;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+}
+
+.pets_slider_cards {
+    position: relative;
+    left: -990px;
+    display: flex;
+}
+
+.pets_card_section {
+    display: flex;
+    gap: 84px;
+}
+
+@keyframes move-right {
+    from {
+        left: -990px;
+    }
+
+    to {
+        left: -1980px;
+    }
+}
+
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 3s;
+}
+
+@keyframes move-left {
+    from {
+        left: -990px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 3s;
 }
 
 .pets_card {
@@ -679,6 +721,44 @@ footer a {
     .pets_slider {
         width: 588px;
     }
+    
+    .pets_slider_cards {
+        left: -588px;
+    }
+    
+    .pets_card_section {
+        gap: 40px;
+    }
+    
+    @keyframes move-right {
+        from {
+            left: -588px;
+        }
+    
+        to {
+            left: -1176px;
+        }
+    }
+    
+    @keyframes move-left {
+        from {
+            left: -588px;
+        }
+    
+        to {
+            left: 0px;
+        }
+    }
+
+    .transition-right {
+        animation-name: move-right;
+        animation-duration: 2s;
+    }
+    
+    .transition-left {
+        animation-name: move-left;
+        animation-duration: 2s;
+    }
 
     .modal__div {
         width: 682px;
@@ -935,6 +1015,39 @@ footer a {
 
     .pets_slider {
         width: 274px;
+    }
+
+    .pets_slider_cards {
+        left: -274px;
+    }
+
+    @keyframes move-right {
+        from {
+            left: -274px;
+        }
+    
+        to {
+            left: -548px;
+        }
+    }
+    
+    @keyframes move-left {
+        from {
+            left: -274px;
+        }
+    
+        to {
+            left: 0px;
+        }
+    }
+    .transition-right {
+        animation-name: move-right;
+        animation-duration: 1s;
+    }
+    
+    .transition-left {
+        animation-name: move-left;
+        animation-duration: 1s;
     }
 
     .pets_arrow {
