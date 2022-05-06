@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Georgia;
+}
+
+.wrapper {
+    background: linear-gradient(98.12deg, #0e0d0d -0.27%, #676768 105.9%);
+    background-size: 100%;
+}
+
+.format {
+    margin: 0 auto;
+    min-width: 1280px;
+    height: 100vh;
+    text-align: center;    
+}
+
+h1 {
+    margin: 0;
+    padding: 30px;
+    color: #fff;
+    font-size: 50px;
+}
+
+p {
+    color: #fff;
+}
+
+textarea {
+    width: 1025px;
+    height: 300px;
+    padding: 10px;
+    color: #444444;
+    font-size: 20px;
+    border: 2px solid #222222;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.keyboard {
+    width: 1025px;
+    padding: 10px 5px;
+    margin: 0 auto;
+    background: linear-gradient(98.12deg, rgb(226, 225, 225) -0.27%, #797878 105.9%);
+    border: 2px solid #222222;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.keyboard--row {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.keyboard--key {
+    float: left;
+    width: 55px;
+    height: 55px;
+    line-height: 50px;
+    margin-left: 10px;
+    text-align: center;
+    color: #fff;
+    background: #888888;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #222222;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.keyboard--key:hover {
+    border: 1px solid #fff;
+}
+
+.key_active,
+.keyboard--key:active {
+    color: #888888;
+    background: #fff;
+}
+
+.Backspace {
+    width: 145px;
+}
+
+.Tab {
+    width: 80px;
+}
+
+.CapsLock {
+    width: 115px;
+}
+
+.Enter {
+    width: 150px;
+}
+
+.ShiftLeft {
+    width: 145px;
+}
+
+.ShiftRight {
+    width: 120px;
+}
+
+.Space {
+    width: 470px;
+}
+
+.hidden {
+    display: none;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: url("../../assets/fonts/georgia.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
