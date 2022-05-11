@@ -11,7 +11,7 @@ export function getCursorPosition(text) {
       end: start + rangelen,
     };
   }
-  if (text.selectionStart || text.selectionStart == '0') {
+  if (text.selectionStart || text.selectionStart === '0') {
     return {
       start: text.selectionStart,
       end: text.selectionEnd,
